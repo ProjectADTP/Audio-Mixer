@@ -10,6 +10,8 @@ public class AudioMasterSettings : MonoBehaviour
     private int _maxVolume = -80;
     private int _minVolume = 0;
 
+    private string _masterVolume = "MasterVolume";
+
     private void OnEnable()
     {
         _masterSound.onValueChanged.AddListener(ToggleMasterVolume);
@@ -24,11 +26,11 @@ public class AudioMasterSettings : MonoBehaviour
     {
         if (isOn)
         {
-            _audioMixer.audioMixer.SetFloat("MasterVolume", _minVolume);
+            _audioMixer.audioMixer.SetFloat(_masterVolume, _minVolume);
         }
         else
         {
-            _audioMixer.audioMixer.SetFloat("MasterVolume", _maxVolume);
+            _audioMixer.audioMixer.SetFloat(_masterVolume, _maxVolume);
         }
     }
 }
