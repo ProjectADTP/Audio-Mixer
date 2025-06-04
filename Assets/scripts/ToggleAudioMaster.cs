@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class AudioMasterSettings : MonoBehaviour
+public class ToggleAudioMaster : MonoBehaviour
 {
     [SerializeField] private AudioMixerGroup _audioMixer;
     [SerializeField] private Toggle _masterSound;

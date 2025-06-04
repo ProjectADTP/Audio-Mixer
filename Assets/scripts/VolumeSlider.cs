@@ -2,14 +2,14 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public abstract class VolumeSliderController : MonoBehaviour
+public abstract class VolumeSlider : MonoBehaviour
 {
     [SerializeField] protected AudioMixerGroup _audioMixer;
     [SerializeField] protected Slider _slider;
     
     protected int _ratio = 20;
 
-    protected abstract string GetMixerParameter();
+    protected abstract string SetMixerParameter();
 
     protected virtual void OnEnable()
     {
@@ -23,7 +23,7 @@ public abstract class VolumeSliderController : MonoBehaviour
 
     private void HandleSliderChanged(float volume)
     {
-        _audioMixer.audioMixer.SetFloat(GetMixerParameter(), ConvertToDecibels(volume));
+        _audioMixer.audioMixer.SetFloat(SetMixerParameter(), ConvertToDecibels(volume));
     }
 
     protected float ConvertToDecibels(float volume)

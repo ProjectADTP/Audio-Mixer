@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UISlider : VolumeSliderController
+public class UISlider : VolumeSlider
 {
-    protected override string GetMixerParameter() => "UIVolume";
+    protected override string SetMixerParameter() => "UIVolume";
 }

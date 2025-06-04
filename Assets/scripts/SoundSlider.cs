@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundSlider : VolumeSliderController
+public class SoundSlider : VolumeSlider
 {
-    protected override string GetMixerParameter() => "SoundVolume";
+    protected override string SetMixerParameter() => "SoundVolume";
 }
