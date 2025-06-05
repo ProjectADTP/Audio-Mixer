@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class MusicSlider : VolumeSlider
 {
-    protected override string SetMixerParameter() => "MusicVolume";
+    protected override string MixerParameter() => "MusicVolume";
 }
